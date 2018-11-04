@@ -1,13 +1,8 @@
 <!doctype html>
 <html>
   <body>
-    asdf
 
-    asdfadsfas
-    dasf
-    ads
-    f
-    asd
+
 
     <!--
       <div style="text-align:center;">
@@ -19,7 +14,14 @@
     -->
 
     <script>
-      
+
+      $.ajax({
+        dataType: "json",
+        url: url,
+        data: data,
+        success: success
+      });
+            
       /*
       var api_key = 'https://api.flex.io/v1/me/pipes/examples-demo-create-chart-with-chartjs-from-a-csv2/run'
       axios({
