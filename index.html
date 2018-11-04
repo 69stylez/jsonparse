@@ -2,6 +2,7 @@
 <html>
   <body>
 
+    <title>test 123</title>
 
 
     <!--
@@ -13,14 +14,22 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     -->
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script>
+    $.getJSON('http://time.jsontest.com', function(data) {
+        
+        var text = `Date: ${data.date}<br>
+                    Time: ${data.time}<br>
+                    Unix time: ${data.milliseconds_since_epoch}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+    </script>
+
     <script>
 
-      $.ajax({
-        dataType: "json",
-        url: url,
-        data: data,
-        success: success
-      });
             
       /*
       var api_key = 'https://api.flex.io/v1/me/pipes/examples-demo-create-chart-with-chartjs-from-a-csv2/run'
@@ -52,19 +61,6 @@
       })
       */
 
-const myObj = {
-  name: 'Skip',
-  age: 2,
-  favoriteFood: 'Steak'
-};
-
-const myObjStr = JSON.stringify(myObj);
-
-console.log(myObjStr);
-// "{"name":"Skip","age":2,"favoriteFood":"Steak"}"
-
-console.log(JSON.parse(myObjStr));
-// Object {name:"Skip",age:2,favoriteFood:"Steak"}"    
 
 
     </script>
