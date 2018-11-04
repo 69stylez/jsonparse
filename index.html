@@ -8,7 +8,7 @@
     ads
     f
     asd
-    
+
     <!--
       <div style="text-align:center;">
         <canvas id="canvas" style="width: 1000px; height: 600px"></canvas>
@@ -50,18 +50,19 @@
       })
       */
 
-    package main
+const myObj = {
+  name: 'Skip',
+  age: 2,
+  favoriteFood: 'Steak'
+};
 
-    import "github.com/tidwall/gjson"
+const myObjStr = JSON.stringify(myObj);
 
-    const json = `{"name":{"first":"Janet","last":"Prichard"},"age":47}`
+console.log(myObjStr);
+// "{"name":"Skip","age":2,"favoriteFood":"Steak"}"
 
-    println(const)
-
-    func main() {
-      value := gjson.Get(json, "name.last")
-      println(value.String())
-    }
+console.log(JSON.parse(myObjStr));
+// Object {name:"Skip",age:2,favoriteFood:"Steak"}"    
 
 
     </script>
